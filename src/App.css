@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  width: 768px;
+  height: 1024px;
+
+  margin: 0 auto;
+}

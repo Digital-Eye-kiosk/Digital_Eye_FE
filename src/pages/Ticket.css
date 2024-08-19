@@ -1,0 +1,37 @@
+.TB {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  width: 700px;
+  height: 120px;
+  align-items: center;
+  box-shadow: 5px 5px rgb(213, 213, 213);
+  justify-content: space-around;
+}
+
+.TBB {
+  text-align: center;
+}
+
+.TBB2 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.TBBB {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  background-color: #b3dff0;
+}
+.function3T {
+  background-color: #ecf6fc;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

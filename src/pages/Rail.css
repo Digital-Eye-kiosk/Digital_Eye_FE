@@ -1,0 +1,68 @@
+.place {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.R {
+  display: flex;
+  background-color: white;
+  width: 700px;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.function3R {
+  background-color: #ecf6fc;
+  height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RB {
+  background-color: white;
+  width: 600px;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 5px 5px rgb(213, 213, 213);
+  cursor: pointer;
+}
+.RB.clicked {
+  background-color: blue;
+}
+
+.RD {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.RD2 {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.RD3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.RD4 {
+  gap: 20px;
+  display: flex;
+}
+.RD5 {
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}

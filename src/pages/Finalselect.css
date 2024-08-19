@@ -1,0 +1,51 @@
+.function2F {
+  background-color: #e1f5fd;
+  line-height: 20px;
+  text-align: center;
+}
+
+.function3F {
+  display: flex;
+  justify-content: center;
+
+  background-color: #ecf6fc;
+  height: 580px;
+}
+
+.BunchFB {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 0 0;
+  gap: 10px;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  width: 600px;
+  height: 550px;
+}
+
+.FinalB {
+  margin: 0 0 0 50px;
+  font-size: 30px;
+  padding: 5px;
+  width: 500px;
+  height: 65px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px rgb(213, 213, 213);
+}
+
+.FinalB2 {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  border-radius: 10px;
+  height: 60px;
+  margin: 15px 0 0 0;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 5px 5px rgb(213, 213, 213);
+  font-size: 30px;
+  text-align: center;
+}

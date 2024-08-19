@@ -1,0 +1,125 @@
+.function1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #b3dff0;
+}
+
+.HB {
+  cursor: pointer;
+  width: 80px;
+  border: none;
+  color: black;
+  background-color: #b3dff0;
+  font-size: 20px;
+}
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.function2 {
+  background-color: #e1f5fd;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.function3 {
+  background-color: #ecf6fc;
+  height: 580px;
+}
+
+.f3s3d {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 20%;
+}
+.f3s3b {
+  background-color: white;
+  width: 600px;
+  height: 100px;
+  border-radius: 10px;
+  font-size: 40px;
+  box-shadow: 5px 5px rgb(213, 213, 213);
+  cursor: pointer;
+}
+
+.base {
+  background-color: white;
+  height: 500px;
+  margin-top: 40px;
+  width: 680px;
+  margin-left: 44px;
+  border: 1px solid black;
+}
+
+.Search {
+  display: flex;
+  gap: 10px;
+}
+
+.Search input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  padding: 15px 0px;
+}
+
+.Search > input:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(37, 147, 255);
+}
+
+.SearchB {
+  /* 뭐였는지 기억이 안남...사용한 흔적이 없음...??? 하다가 해당 태그를 지웠던거 같긴한데 일단 놔둬봄 */
+  cursor: pointer;
+  width: 70px;
+  border: none;
+  background-color: #b3dff0;
+  border-radius: 5px;
+  position: absolute;
+  left: 70%;
+  top: 37.8%;
+  height: 40px;
+}
+
+.Result {
+  margin: 5px;
+  overflow: scroll;
+  height: 88%;
+}
+.SearchR {
+  width: 48%;
+  height: 80px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: white;
+  font-size: 40px;
+}
+
+.SearchR:hover {
+  background-color: #b3dff0;
+}
+.Footer {
+  background-color: #e1f5fd;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+}
+
+.FB {
+  background-color: #e1f5fd;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.VM {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #ecf6fc;
+
+  gap: 50px;
+  height: 686px;
+}
+.RM {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #ecf6fc;
+
+  gap: 50px;
+  height: 570px;
+}
+
+.SB2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.SB3 {
+  width: 330px;
+  height: 100px;
+  font-size: 20px;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 5px 5px rgb(213, 213, 213);
+  cursor: pointer;
+}
+
+.Voiceselect {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
