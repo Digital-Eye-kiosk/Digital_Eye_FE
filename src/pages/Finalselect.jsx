@@ -11,8 +11,21 @@ const Finalselect = () => {
   const navigateTo = (path) => {
     navigate(path);
   };
+
   const final = () => {
     navigate("/final");
+  };
+
+  // 좌석 정보를 포맷팅하는 함수
+  const formatSeats = (seats) => {
+    return Object.entries(seats)
+      .map(
+        ([car, seatsArray]) =>
+          `호차 ${parseInt(car) + 1}: ${seatsArray
+            .map((seat) => `좌석 ${seat + 1}`)
+            .join(", ")}`
+      )
+      .join(" | ");
   };
 
   return (
@@ -20,7 +33,7 @@ const Finalselect = () => {
       <div className="Header">
         <img src="../img/코레일.png" alt="로고" />
         <div className="function1">
-          <button className="HB" onClick={() => navigateTo("/Rail")}>
+          <button className="HB" onClick={() => navigateTo("/Seat")}>
             이전
           </button>
           <h1>최종 확인</h1>
@@ -60,15 +73,19 @@ const Finalselect = () => {
               인원 >{" "}
               {`성인: ${selectedRegion.tickets.adult}, 노인: ${selectedRegion.tickets.senior}, 아동: ${selectedRegion.tickets.child}, 장애인: ${selectedRegion.tickets.disabled}`}
             </button>
-            <button className="FinalB" onClick={() => navigateTo("/select3")}>
-              열차 > {selectedRegion.trainType || "선택되지 않음"}
-            </button>
+
             <button className="FinalB" onClick={() => navigateTo("/Rail")}>
               열차시간 > {selectedRegion.carDetails.time1 || "선택되지 않음"} >{" "}
               {selectedRegion.carDetails.time2 || "선택되지 않음"}
             </button>
             <button className="FinalB" onClick={() => navigateTo("/Rail")}>
               가격 > {selectedRegion.carDetails.carPrice || "선택되지 않음"}
+            </button>
+            <button className="FinalB">
+              좌석정보 >{" "}
+              {selectedRegion.selectedSeats
+                ? formatSeats(selectedRegion.selectedSeats)
+                : "선택되지 않음"}
             </button>
           </div>
         </div>

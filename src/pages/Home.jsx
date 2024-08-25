@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const navigateToVoiceselect = () => {
-    navigate("/voiceselect");
+    navigate("/select1");
   };
   const navigateToPurchase = () => {
     navigate("/selectR");

@@ -5,7 +5,8 @@ import "./Select.css";
 
 const Select = () => {
   const navigate = useNavigate();
-  const { setSelectedRegion } = useContext(MyContext);
+  const { selectedRegion, setSelectedRegion } = useContext(MyContext);
+
   const navigateToHome = () => {
     navigate("/");
   };
@@ -15,7 +16,7 @@ const Select = () => {
   };
 
   const next = () => {
-    navigate("/select2");
+    navigate("/selectR2");
   };
 
   const handleRegionClick = (region) => {
@@ -31,10 +32,8 @@ const Select = () => {
           <button className="HB" onClick={before}>
             이전
           </button>
-          <h1>출발역 선택</h1>
-          <button className="HB" onClick={next}>
-            다음
-          </button>
+          <h1>{selectedRegion.departureState} 내 출발역 선택</h1>
+          <div />
         </div>
       </div>
       <div className="Main">
@@ -51,10 +50,6 @@ const Select = () => {
         </div>
         <div className="function3">
           <div className="base">
-            <div className="Search">
-              <input placeholder="역 검색" />
-              <button>검색</button>
-            </div>
             <div className="Result">
               <button
                 className="SearchR"
@@ -76,16 +71,6 @@ const Select = () => {
               </button>
             </div>
           </div>
-        </div>
-        <div className="Footer">
-          <button className="FB" onClick={navigateToHome}>
-            <img
-              src="../img/홈화면.png"
-              alt="Home"
-              height="80px"
-              width="80px"
-            />
-          </button>
         </div>
       </div>
     </div>

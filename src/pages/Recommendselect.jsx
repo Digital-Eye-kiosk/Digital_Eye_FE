@@ -4,7 +4,7 @@ import MyContext from "../components/MyContext";
 import "./VRselect.css";
 import "./Select.css";
 
-const Voiceselect = () => {
+const Recommendselect = () => {
   const navigate = useNavigate();
   const { selectedRegion, setSelectedRegion } = useContext(MyContext);
 
@@ -15,15 +15,10 @@ const Voiceselect = () => {
     navigate("/");
   };
   const before = () => {
-    navigate("/Rail");
+    navigate("/Price");
   };
   const next = () => {
-    navigate("/finalselect");
-  };
-
-  const handleRegionClick = (region) => {
-    setSelectedRegion((prevState) => ({ ...prevState, arrival: region }));
-    next();
+    navigate("/seat");
   };
 
   return (
@@ -35,21 +30,19 @@ const Voiceselect = () => {
             이전
           </button>
           <h1> 추천좌석 서비스 사용 여부 </h1>
-          <button className="HB" onClick={next}>
-            다음
-          </button>
+          <div />
         </div>
       </div>
       <div className="Main">
         <div className="function2">
           <div>
             <h5>출발역</h5>
-            <h3>{selectedRegion.departure || "고정"}</h3>
+            <h3>{selectedRegion.departure || "-"}</h3>
           </div>
           <h2> > </h2>
           <div>
             <h5>도착역</h5>
-            <h3>{selectedRegion.arrival || "선택됨"}</h3>
+            <h3>{selectedRegion.arrival || "-"}</h3>
           </div>
         </div>
         <div className="RM">
@@ -59,23 +52,17 @@ const Voiceselect = () => {
           </div>
 
           <div className="SB2">
-            <button className="SB3" onClick={navigateToFinal}>
+            <button className="SB3" onClick={next}>
               네
             </button>
-            <button className="SB3" onClick={navigateToFinal}>
+            <button className="SB3" onClick={next}>
               아니요
             </button>
           </div>
-        </div>
-
-        <div className="Footer">
-          <button className="FB" onClick={navigateToHome}>
-            <img src="../img/홈화면.png" height="80px" width="80px" />
-          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Voiceselect;
+export default Recommendselect;

@@ -1,0 +1,71 @@
+.Seat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #ecf6fc;
+  height: 680px;
+}
+
+.baseS {
+  background-color: white;
+  height: 500px;
+  margin-top: 40px;
+  width: 680px;
+  margin-left: 44px;
+  border: 1px solid black;
+}
+
+.ResultS {
+  margin: 5px;
+  overflow: scroll;
+  height: 98%;
+}
+.right2 {
+  display: flex;
+}
+
+.Seat2 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Seat3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  gap: 10px;
+}
+
+.Seat3 > :nth-child(4n + 1) {
+  margin-right: 10px;
+}
+
+.Seat3 > :nth-child(4n + 2) {
+  margin-right: 10px;
+}
+.Seat3 > :nth-child(4n + 2) {
+  margin-right: 30px;
+  margin-left: -30px;
+}
+
+.Seat3 > :nth-child(4n + 3) {
+  margin-left: 30px;
+}
+
+.SeatB {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+
+.SeatB.clicked {
+  background-color: #007bff;
+  color: white;
+}

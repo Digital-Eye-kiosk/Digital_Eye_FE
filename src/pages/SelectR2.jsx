@@ -15,13 +15,13 @@ const SelectR = () => {
   };
 
   const navigateToSelect2 = () => {
-    navigate("/select");
+    navigate("/select2");
   };
 
   const handleRegionClick = (region) => {
     setSelectedRegion((prevState) => ({
       ...prevState,
-      departureState: region,
+      arrivalState: region,
     }));
     navigateToSelect2();
   };
@@ -35,10 +35,10 @@ const SelectR = () => {
       <div className="Header">
         <img src="../img/코레일.png" alt="Logo" />
         <div className="function1">
-          <button className="HB" onClick={() => navigate("/")}>
+          <button className="HB" onClick={() => navigate("/select")}>
             이전
           </button>
-          <h1>출발 지역 선택</h1>
+          <h1>도착 지역 선택</h1>
           <div />
         </div>
       </div>
@@ -46,7 +46,7 @@ const SelectR = () => {
         <div className="function2">
           <div>
             <h5>출발역</h5>
-            <h3>{"-"}</h3>
+            <h3>{selectedRegion.departure || "-"}</h3>
           </div>
           <h2> > </h2>
           <div>

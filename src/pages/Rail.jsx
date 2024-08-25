@@ -9,32 +9,28 @@ const Rail = () => {
 
   const time1Ref = useRef();
   const time2Ref = useRef();
-
-  const navigateToHome = () => {
-    navigate("/");
-  };
+  const priceRef = useRef();
 
   const before = () => {
-    navigate("/select3");
+    navigate("/ticket");
   };
 
   const next = () => {
-    navigate("/Recommendselect");
+    navigate("/price");
   };
 
-  const handleButtonClick = (carType, carPrice) => {
+  const handleButtonClick = (carPrice) => {
     const time1Text = time1Ref.current?.innerText || "";
     const time2Text = time2Ref.current?.innerText || "";
+    const priceText = priceRef.current?.innerText || "";
 
     setSelectedRegion((prevState) => ({
       ...prevState,
       carDetails: {
         time1: time1Text,
         time2: time2Text,
-        carType: carType,
-        carPrice: carPrice,
+        carPrice: priceText,
       },
-      selectedCar: carType,
       selectedCarPrice: carPrice,
     }));
 
@@ -50,9 +46,7 @@ const Rail = () => {
             이전
           </button>
           <h1>열차 시간 선택</h1>
-          <button className="HB" onClick={next}>
-            다음
-          </button>
+          <div />
         </div>
       </div>
       <div className="Main">
@@ -76,7 +70,10 @@ const Rail = () => {
               <h1>{selectedRegion.arrival || "-"}</h1>
             </div>
             <div className="data">
-              <div className="RB">
+              <button
+                className="RB"
+                onClick={() => handleButtonClick("carType1", 10000)}
+              >
                 <div className="RD">
                   <div className="RD2">
                     <div className="RD3">
@@ -94,35 +91,14 @@ const Rail = () => {
                     </div>
                   </div>
                   <div className="RD4">
-                    <button
-                      className="RD5"
-                      onClick={() => handleButtonClick("열차칸 1", "10000")}
-                    >
-                      <h2>열차칸 1</h2>
-                      <h2>10,000</h2>
-                    </button>
-                    <button
-                      className="RD5"
-                      onClick={() => handleButtonClick("열차칸 2", "15000")}
-                    >
-                      <h2>열차칸 2</h2>
-                      <h2>15,000</h2>
-                    </button>
+                    <div className="RD5">
+                      <h2 ref={priceRef}>10,000</h2>{" "}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
-        </div>
-        <div className="Footer">
-          <button className="FB" onClick={navigateToHome}>
-            <img
-              src="../img/홈화면.png"
-              alt="홈 화면"
-              height="80px"
-              width="80px"
-            />
-          </button>
         </div>
       </div>
     </div>

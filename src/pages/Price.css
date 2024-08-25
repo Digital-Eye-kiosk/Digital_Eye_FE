@@ -1,0 +1,33 @@
+.Price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ecf6fc;
+
+  gap: 50px;
+  height: 680px;
+}
+
+.classBase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+.class {
+  display: flex;
+  gap: 50px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* .class2 {
+  display: flex;
+  gap: 70px;
+  text-align: center;
+} */

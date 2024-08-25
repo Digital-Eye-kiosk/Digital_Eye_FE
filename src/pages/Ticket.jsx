@@ -16,22 +16,15 @@ const Ticket = () => {
   };
 
   const next = () => {
-    navigate("/select3");
+    navigate("/rail");
   };
 
-  const [adultCount, setAdultCount] = useState(0);
-  const [seniorCount, setSeniorCount] = useState(0);
-  const [childCount, setChildCount] = useState(0);
-  const [disabledCount, setDisabledCount] = useState(0);
-
-  useEffect(() => {
-    if (selectedRegion.tickets) {
-      setAdultCount(selectedRegion.tickets.adult || 0);
-      setSeniorCount(selectedRegion.tickets.senior || 0);
-      setChildCount(selectedRegion.tickets.child || 0);
-      setDisabledCount(selectedRegion.tickets.disabled || 0);
-    }
-  }, [selectedRegion.tickets]);
+  const [adultCount, setAdultCount] = useState(selectedRegion.tickets.adult);
+  const [seniorCount, setSeniorCount] = useState(selectedRegion.tickets.senior);
+  const [childCount, setChildCount] = useState(selectedRegion.tickets.child);
+  const [disabledCount, setDisabledCount] = useState(
+    selectedRegion.tickets.disabled
+  );
 
   useEffect(() => {
     setSelectedRegion((prevState) => ({
@@ -76,12 +69,12 @@ const Ticket = () => {
         <div className="function2">
           <div>
             <h5>출발역</h5>
-            <h3>{selectedRegion.departure || "고정"}</h3>
+            <h3>{selectedRegion.departure || "-"}</h3>
           </div>
           <h2> > </h2>
           <div>
             <h5>도착역</h5>
-            <h3>{selectedRegion.arrival || "선택됨"}</h3>
+            <h3>{selectedRegion.arrival || "-"}</h3>
           </div>
         </div>
 
@@ -170,16 +163,6 @@ const Ticket = () => {
               </button>
             </div>
           </div>
-        </div>
-        <div className="Footer">
-          <button className="FB" onClick={navigateToHome}>
-            <img
-              src="../img/홈화면.png"
-              height="80px"
-              width="80px"
-              alt="홈화면"
-            />
-          </button>
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@
 
 .function3 {
   background-color: #ecf6fc;
-  height: 580px;
+  height: 680px;
 }
 
 .f3s3d {
@@ -93,10 +93,15 @@
   height: 40px;
 }
 
-.Result {
+.Result2 {
   margin: 5px;
   overflow: scroll;
   height: 88%;
+}
+.Result {
+  margin: 5px;
+  overflow: scroll;
+  height: 98%;
 }
 .SearchR {
   width: 48%;
